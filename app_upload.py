@@ -5,7 +5,7 @@ import pandas as pd
 #import matplotlib.pyplot as plt
 import streamlit as st
 import base64
-import plotly.express as px
+#import plotly.express as px
 import pickle
 import io
 #=======================================mise en forme================================================#
@@ -335,11 +335,4 @@ if uploaded_file:
         st.write("### Tableau récapitulatif")
         st.dataframe(prediction_counts.reset_index().rename(columns={"index": "Type de billet", "Prédiction": "Nombre"}))
 
-        # histogramme
-        prediction_counts = results_df["Prédiction"].replace({0: "Faux billet", 1: "Vrai billet"}).value_counts().reset_index()
-        prediction_counts.columns = ["Type de billet", "Nombre"]
-
-        fig = px.bar(prediction_counts,
-                     x="Type de billet", y="Nombre",
-                     title="Distribution des Prédictions")
-        st.plotly_chart(fig, use_container_width=True)
+       
