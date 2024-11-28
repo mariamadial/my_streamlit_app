@@ -3,3 +3,4 @@ plotly
 sklearn
 pip install --upgrade pip
 scikit-learn
+pip install scikit-learn
