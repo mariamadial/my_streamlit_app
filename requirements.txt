@@ -1,5 +1,1 @@
-matplotlib
-plotly
-sklearn
-pip install --upgrade pip
-scikit-learn 1.5.2
+
